@@ -11,8 +11,8 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-    title: 'My Portfolio',
-    description: 'Created with the help of Frontend Tribe',
+    title: 'Romaric SEGLA',
+    description: 'Created while learning NEXT.js',
 };
 
 export default function RootLayout({
@@ -24,9 +24,9 @@ export default function RootLayout({
         <html lang='en'>
             <body
                 className={twMerge(
-                    inter.className,
-                    calistoga.className,
-                    'bg-gray-900 text-white antialiased'
+                    inter.variable,
+                    calistoga.variable,
+                    'bg-gray-900 text-white antialiased font-sans'
                 )}>
                 {children}
             </body>
