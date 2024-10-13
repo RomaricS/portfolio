@@ -1,4 +1,4 @@
-import darkSaasLandingPage from '@/assets/images/dark-saas-landing-page.png';
+import sekoia from '@/assets/images/sek1.png';
 import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png';
 import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png';
 
@@ -13,7 +13,7 @@ export const portfolioProjects = [
             { title: 'Joint.js Chart.js' },
         ],
         link: 'https://www.sekoia.io/fr',
-        image: darkSaasLandingPage,
+        image: sekoia,
     },
     {
         company: 'Convelio',

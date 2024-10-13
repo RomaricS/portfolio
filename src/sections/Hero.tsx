@@ -1,4 +1,4 @@
-import memojiImage from '@/assets/images/memoji-computer.png';
+import memojiImage from '@/assets/images/man-pc.png';
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 import Image from 'next/image';
 import grainImage from '@/assets/images/grain.jpg';
@@ -19,7 +19,10 @@ export const HeroSection = () => {
     const rings = HeroRings.map((ring: string) => (
         <div
             key={ring}
-            className={`hero-ring size-[${ring}]`}></div>
+            className='hero-ring' style={{
+                height: `${ring}`,
+                width: `${ring}`,
+            }}></div>
     ));
 
     return (
