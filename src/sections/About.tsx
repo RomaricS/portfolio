@@ -2,7 +2,7 @@ import { Card } from '@/components/Card';
 import SectionHeader from '@/components/SectionHeader';
 import BookImage from '@/assets/images/book-cover.png';
 import Image from 'next/image';
-import MapImage from '@/assets/images/map.png';
+import MapImage from '@/assets/images/maps.png';
 import Memoji from '@/assets/images/jay.png';
 import { CardHeader } from '@/components/CardHeader';
 import { hobbies, toolboxItems } from '@/constants/About';
