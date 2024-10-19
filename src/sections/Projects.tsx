@@ -2,7 +2,6 @@ import { portfolioProjects } from '@/constants/Projects';
 import Image from 'next/image';
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 import ArrowUpRight from '@/assets/icons/arrow-up-right.svg';
-import grainImage from '@/assets/images/grain.jpg';
 import SectionHeader from '@/components/SectionHeader';
 import { Card } from '@/components/Card';
 
@@ -19,10 +18,12 @@ export const ProjectsSection = () => {
                 />
                 <div className='flex flex-col md:mt-20 mt-10 gap-20'>
                     {portfolioProjects.map(
-                        ({ title, company, year, results, link, image }) => (
+                        ({ title, company, year, results, link, image }, projectIndex) => (
                             <Card
                                 key={title}
-                                className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20">
+                                className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky top-16" style={{
+                                    top: `calc(64px + ${projectIndex * 44}px )`
+                                }}>
                                 <div className='lg:grid lg:grid-cols-2 lg:gap-16'>
                                     <div className='lg:pb-16'>
                                         <div className='bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex font-bold gap-2 uppercase tracking-widest text-sm text-transparent bg-clip-text'>

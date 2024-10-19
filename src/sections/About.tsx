@@ -1,3 +1,4 @@
+"use client";
 import { Card } from '@/components/Card';
 import SectionHeader from '@/components/SectionHeader';
 import BookImage from '@/assets/images/book-cover.png';
@@ -7,8 +8,11 @@ import Memoji from '@/assets/images/jay.png';
 import { CardHeader } from '@/components/CardHeader';
 import { hobbies, toolboxItems } from '@/constants/About';
 import { ToolboxItems } from '@/components/ToolboxItems';
+import { motion } from 'framer-motion';
+import { useRef } from 'react';
 
 export const AboutSection = () => {
+    const constraintRef = useRef(null);
     return (
         <div className='py-20 lg:py-28'>
             <div className='container'>
@@ -46,11 +50,12 @@ export const AboutSection = () => {
                             <ToolboxItems
                                 items={toolboxItems}
                                 className=''
+                                itemWrapperclassName='animate-move-left [animation-duration:30s]'
                             />
                             <ToolboxItems
                                 items={toolboxItems}
                                 className='mt-6'
-                                itemWrapperclassName='-translate-x-1/2'
+                                itemWrapperclassName='-translate-x-1/2 animate-move-right [animation-duration:45s]'
                             />
                         </Card>
                     </div>
@@ -65,20 +70,23 @@ export const AboutSection = () => {
                                 }
                                 className='px-6 py-6'
                             />
-                            <div className='relative flex-1'>
+                            <div className='relative flex-1' ref={constraintRef}>
                                 {hobbies.map(({ title, emoji, left, top }) => (
-                                    <div
+                                    <motion.div
                                         key={title}
                                         className='inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute'
                                         style={{
                                             left: left,
                                             top: top,
-                                        }}>
+                                        }} 
+                                        drag 
+                                        dragConstraints={constraintRef}
+                                        >
                                         <span className='font-medium text-gray-950'>
                                             {title}
                                         </span>
                                         <span>{emoji}</span>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
                         </Card>
@@ -88,7 +96,9 @@ export const AboutSection = () => {
                                 alt='My location'
                                 className='h-full w-full object-cover object-left-top'
                             />
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+                                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
+                                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
                                 <Image
                                     className='max-w-16 mx-auto'
                                     src={Memoji}

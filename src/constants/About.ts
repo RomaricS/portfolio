@@ -90,7 +90,7 @@ export const hobbies = [
         title: 'US Football',
         emoji: '🏈',
         top: '40%',
-        left: '35%',
+        left: '55%',
     },
     {
         title: 'Fitness',

@@ -6,13 +6,17 @@ import HeroOrbit from '@/components/HeroOrbit';
 import { HeroRings, Stars } from '@/constants/Hero';
 
 export const HeroSection = () => {
-    const stars = Stars.map(({ id, isSparkle, iconSize, size, rotation }) => (
+    const stars = Stars.map(({ id, isSparkle, iconSize, size, rotation, shouldOrbit, orbitDuration, shouldSpin, spinDuration }) => (
         <HeroOrbit
             key={id}
             isSparkle={isSparkle}
             iconSize={iconSize}
             size={size}
             rotation={rotation}
+            shouldOrbit={shouldOrbit}
+            orbitDuration={orbitDuration}
+            shouldSpin={shouldSpin}
+            spinDuration={spinDuration}
         />
     ));
 
@@ -47,7 +51,9 @@ export const HeroSection = () => {
                         alt='emoji of person working on a computer'
                     />
                     <div className='bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
-                        <div className='bg-green-500 size-2.5 rounded-full'></div>
+                        <div className='bg-green-500 size-2.5 rounded-full relative'>
+                            <div className='bg-green-500 absolute inset-0 animate-ping-large rounded-full'></div>
+                        </div>
                         <div className='text-sm font-semibold'>
                             Available for new adventures
                         </div>

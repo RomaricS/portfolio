@@ -3,15 +3,15 @@ import ArrowuprightIcon from '@/assets/icons/arrow-up-right.svg';
 const socials = [
     {
         title: 'LinkedIn',
-        link: '#',
+        link: 'https://www.linkedin.com/in/romaric-segla',
     },
     {
         title: 'Github',
-        link: '#',
+        link: 'https://github.com/RomaricS',
     },
     {
         title: 'Youtube',
-        link: '#',
+        link: 'https://www.youtube.com/@easyj',
     },
     {
         title: 'Bold',
