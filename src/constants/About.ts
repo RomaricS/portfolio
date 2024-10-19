@@ -87,10 +87,16 @@ export const hobbies = [
         left: '10%',
     },
     {
-        title: 'US Football',
+        title: 'Soccer',
+        emoji: '⚽',
+        top: '55%',
+        left: '60%',
+    },
+    {
+        title: 'Football',
         emoji: '🏈',
-        top: '40%',
-        left: '55%',
+        top: '30%',
+        left: '25%',
     },
     {
         title: 'Fitness',

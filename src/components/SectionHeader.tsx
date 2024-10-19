@@ -7,7 +7,7 @@ const SectionHeader = ({
 }: {
     title: string;
     subTitle: string;
-    description: string;
+    description?: string;
 }) => {
     return (
         <>
@@ -19,9 +19,11 @@ const SectionHeader = ({
             <h2 className='font-serif text-3xl md:text-5xl text-center mt-6'>
                 {subTitle}
             </h2>
-            <p className='text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto'>
-                {description}
-            </p>
+            {description && (
+                <p className='text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto'>
+                    {description}
+                </p>
+            )}
         </>
     );
 };

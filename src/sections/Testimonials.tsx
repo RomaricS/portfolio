@@ -47,9 +47,9 @@ export const TestimonialsSection = () => {
         <div className='py-16 lg:py-24'>
             <div className='container'>
                 <SectionHeader
-                    title={'Happy Clients'}
-                    subTitle={'What Clients say about me'}
-                    description={"Here's what they say about my work."}
+                    title={'My teammates'}
+                    subTitle={'What THEY say about ME'}
+                    // description={"Here's what they say about my work."}
                 />
                 <div className='mt-16 lg:mt-24 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 my-4'>
                     <div className='flex flex-none pr-8 gap-8 animate-move-left [animation-duration:90s] hover:[animation-play-state:paused]'>

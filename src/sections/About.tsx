@@ -14,7 +14,7 @@ import { useRef } from 'react';
 export const AboutSection = () => {
     const constraintRef = useRef(null);
     return (
-        <div className='py-20 lg:py-28'>
+        <div className='py-20 lg:py-28' id='about'>
             <div className='container'>
                 <SectionHeader
                     title={'About me'}

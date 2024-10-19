@@ -30,7 +30,7 @@ export const HeroSection = () => {
     ));
 
     return (
-        <div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
+        <div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip' id='home'>
             {/* BG & stars */}
             <div className='absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'>
                 <div
@@ -74,11 +74,11 @@ export const HeroSection = () => {
 
                 {/* CTA */}
                 <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
-                    <button className='inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl'>
+                    <button className='inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl z-0'>
                         <span className='font-semibold'>Explore my world</span>
                         <ArrowDown className='size-4' />
                     </button>
-                    <button className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl'>
+                    <button className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl z-0'>
                         <span>👋</span>
                         <span className='font-semibold'>Let&apos;s Connect</span>
                     </button>
