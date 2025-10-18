@@ -4,7 +4,6 @@ import Image from "next/image";
 import grainImage from "@/assets/images/grain.jpg";
 import HeroOrbit from "@/components/HeroOrbit";
 import { HeroRings, Stars } from "@/constants/Hero";
-import cvFile from "@/assets/files/cv-latest.pdf";
 
 export const HeroSection = () => {
     const stars = Stars.map(
@@ -92,14 +91,14 @@ export const HeroSection = () => {
 
                 {/* CTA */}
                 <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4 relative z-10">
-                    <a target="_blank" href="https://github.com/RomaricS">
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/RomaricS">
                         <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl z-0">
                             <span className="font-semibold">Github</span>
                             <Github className="size-4" />
                         </button>
                     </a>
                     <a
-                        href={cvFile}
+                        href="/files/cv-latest.pdf"
                         download="cv-latest.pdf"
                     >
                         <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl z-0">

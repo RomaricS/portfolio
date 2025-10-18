@@ -19,7 +19,7 @@ export const AboutSection = () => {
                 <SectionHeader
                     title={'About me'}
                     subTitle={'A glimpse into my world'}
-                    description={'Learn more aout me.'}
+                    description={'Learn more about me.'}
                 />
 
                 <div className='mt-20 flex flex-col gap-8'>
