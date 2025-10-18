@@ -4,6 +4,7 @@ import Image from "next/image";
 import grainImage from "@/assets/images/grain.jpg";
 import HeroOrbit from "@/components/HeroOrbit";
 import { HeroRings, Stars } from "@/constants/Hero";
+import cvFile from "@/assets/files/cv-latest.pdf";
 
 export const HeroSection = () => {
     const stars = Stars.map(
@@ -98,8 +99,8 @@ export const HeroSection = () => {
                         </button>
                     </a>
                     <a
-                        target="_blank"
-                        href="https://drive.google.com/file/d/10b4h4l1xK6NfYLv2GhblxZ2p7yj-8-4W/view?usp=drive_link"
+                        href={cvFile}
+                        download="cv-latest.pdf"
                     >
                         <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl z-0">
                             <span>👋</span>
