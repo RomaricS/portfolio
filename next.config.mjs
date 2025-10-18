@@ -41,6 +41,15 @@ const nextConfig = {
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i;
 
+    // Add PDF file support
+    config.module.rules.push({
+      test: /\.pdf$/,
+      type: 'asset/resource',
+      generator: {
+        filename: 'static/files/[name][ext]'
+      }
+    });
+
     return config;
   },
 };
